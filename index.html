@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coronavirus Stats</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="icon"><i class="fas fa-signal"></i></div>
+            <div class="text">Coronavirus-Tracker</div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#about-mark" id="one">About</span></a></li>
+                <li><a href="#stat-mark" id="two">Statistics</a></li>
+                <li><a href="#geo-mark" id="three">Geo-Tracker</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <div class="filler"></div>
+    <div class="loader" ></div>
+    <div class="filler2"></div>
+    
+    
+   <div class="float">
+              <h1 id="left" style="margin-bottom: 1%;">A<span style="background-color: black; color: white;">BOUT</span></h1>       
+           <h1 id="right"><span style="background-color: black; color: white;padding: 2px;">CORONA</span>VIRUS</h1>       
+   </div>
+   <span id="about-mark"></span>
+   <hr>
+
+   
+   <div class="label" style="font-size: 50px; text-align: center;">ABOUT</div>
+
+   <hr>
+   <div class="about-text">
+       <div class="t" data-aos="fade-right" >
+           <p>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
+            Most people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without special treatment.</p>
+            <p>
+                <div class="interstats" style="margin-top: 10px;">
+                    <div class="cases">Cases: 6.66 Million</div>
+                    <div class="deaths">Deaths: 400 Thousand</div>
+
+                </div>
+       </div>
+       <div class="st" data-aos="fade-left">
+        <p>The virus that causes COVID-19 is mainly transmitted through droplets generated when an infected person coughs, sneezes, or exhales.
+        You can be infected by breathing in the virus if you are within close proximity of someone who has COVID-19, or by touching a contaminated surface and then your eyes, nose or mouth.</p>
+            
+       </div>
+
+       
+   </div>
+   <div class="about-website" data-aos="fade-up">
+           <h2 style="text-align: center;margin-bottom: 2%;">About The Covid Tracker</h2>
+           <p>This Web-App provides a Live-Daily update of Coronavirus In India. It holds all the Information Since the very Beginning of the Pandemic in India. It also Holds Statewise and Distrct Wise Coronavirus Tally. It Invloves a section where in the user can track Their own State and District, obtaining information of the areas near them. It also saves the usersVisited places. It is soon to host The list of vetted and proximate Hospitals that are providing Coronavirus Care. Take Care and Stay Safe!</p>
+
+</div>
+   <hr style="margin-top: 10%; margin-bottom: 10%;">
+   <span id="stat-mark"></span>
+
+   <div class="label" style="font-size: 50px; text-align: center;margin-bottom: 3%;">STATISTICS</div>
+
+    <h1 style="text-align: center; margin-bottom: 2%;">Country Wide Statistics</h1>
+   <div class="main-stat">
+
+        <div class="stats">
+            <div class="scases" data-aos="fade-right">
+                <h2>Total Cases =><address class="countUp" id="caseval"></address></h2>
+                <h4>+<address class="countUp" id="caseinc"></address></h4>
+            </div>
+            <div class="sdeath" data-aos="fade-right"  >
+                <h2 >Deaths => <address id="deathval" class="countUp"></address></h2>
+                <h4>+<address id="deathinc" class="countUp"></address></h4>
+
+            </div>
+            <div class="srecovered" data-aos="fade-right" data-aos-offset="50">
+                <h2>Recoveries=> <address id="rval" class="countUp"></address></h2>
+                <h4>+<address id="rinc" class="countUp"></address></h4>
+
+            </div>          
+        </div>
+        <div class="graph" data-aos="zoom-in">
+            <div id="curve_chart"  style="height: 370px; width: 100%;box-shadow: 2px 2px 10px black;"><div class="overlay"><h3 style="font-size: 30px;">Get New Data</h3></div></div>
+
+        </div>
+   </div>
+   <button id="newdata">Get New Data</button>
+
+   
+
+
+   <div class="label" style="font-size: 50px; text-align: center;margin-bottom: 3%; margin-top: 30%;"><hr style="margin-top: 10%; margin-bottom: 10%;"> <span id="geo-mark"></span>Geo-Tracker  </span>
+   </div>
+
+   <hr style="margin-top: 10%; margin-bottom: 10%;">
+
+
+   <div class="geo">
+       <h3>The Geo-Tracking App, uses the HTML Geolocation API and a Reverse Geocoding API, to determine your current location and the return the statistics of your nearby areas. The Website uses a Free-API, and hence is not 100% accurate. The confidence Variations are between 0-20. Click on the button to Get your Localities Coronavirus Statistics. If the location is inaccurate, you can visit out Archive Page and manually navigate to your Region.</h3>
+       <div class="getbtn" ><a href="#bottom"><button id="getstate">Get Regional Data</button></a></div>
+
+    <div class="state" >
+        <div class="tag" id="tagstate"></div>
+        
+        <table style="margin-top: 3%;">
+            <tr>
+                <th>Feild</th>
+                <th>Number Of People</th>
+                <th>Increment</th>
+              </tr>
+              <tr>
+                <td>Active</td>
+                <td id="activestate"></td>
+                <td>N-I-L</td>
+              </tr>
+              <tr>
+                <td>Infected</td>
+                <td id="infectedstate"></td>
+                <td id="infectedstateinc"></td>
+              </tr>
+              <tr>
+                <td>Deaths</td>
+                <td id="deathstate"></td>
+                <td id="deathstateinc"></td>
+              </tr>
+              <tr>
+                <td>Recovered</td>
+                <td id="recoverstate"> </td>
+                <td id="recoverstateinc"></td>
+              </tr>
+             
+        </table>
+    </div>
+    <div class="region">
+        <div class="tag" id="tagregion"></div>
+        <table style="margin-top: 3%;">
+            <tr>
+                <th>Feild</th>
+                <th>Number Of People</th>
+              </tr>
+              <tr>
+                <td>Active</td>
+                <td id="activeregion"></td>
+              </tr>
+              <tr>
+                <td>Infected</td>
+                <td id="infectedregion"></td>
+                
+              </tr>
+              <tr>
+                <td>Deaths</td>
+                <td id="deathregion"></td>
+              </tr>
+              <tr>
+                <td>Recovered</td>
+                <td id="recoveredregion"> </td>
+              </tr>
+             
+        </table>
+    </div>
+   </div>
+
+
+<span id="bottom"></span>
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="script.js"></script>
+    <script>
+        AOS.init();
+      </script>
+
+</body>
+</html>
