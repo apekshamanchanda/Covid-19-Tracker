@@ -80,7 +80,7 @@ var copy=[];
 $('#newdata').on('click', function(e){
     $(".overlay").fadeOut();
     var xhr= new XMLHttpRequest();
-    xhr.open('GET', 'https://api.covid19india.org/data.json', true);
+    xhr.open('GET', 'https://data.covid19india.org/data.json', true);
 
     xhr.onload= function (){
         obj = JSON.parse(this.responseText);
@@ -166,7 +166,7 @@ function success(position){
         document.getElementById('tagstate').innerHTML=geocoded.results[0].components.state;
         document.getElementById('tagregion').innerHTML= geocoded.results[0].components.county+",   "+ geocoded.results[0].components.state_district;
         var xhr2 = new XMLHttpRequest();
-        xhr2.open('GET', 'https://api.covid19india.org/state_district_wise.json', true);
+        xhr2.open('GET', 'https://data.covid19india.org/state_district_wise.json', true);
         xhr2.onload=function(){
             robj=JSON.parse(this.responseText)
             document.getElementById('activeregion').innerHTML = robj[geocoded.results[0].components.state].districtData[geocoded.results[0].components.state_district].active

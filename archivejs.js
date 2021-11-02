@@ -1,6 +1,6 @@
 var req= new XMLHttpRequest();
 
-req.open('GET', 'https://api.covid19india.org/data.json', true);
+req.open('GET', 'https://data.covid19india.org/data.json', true);
 
 
 req.onload = function(){
